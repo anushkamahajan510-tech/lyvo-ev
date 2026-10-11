@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LYVO Loader Electric Cargo Vehicle | LIVELIFE AUTOTECH</title>
+  <meta name="description" content="Explore the LYVO Loader commercial electric three-wheeler with 750 kg payload capacity, 2770 x 980 mm cargo bed, and 120+ km* range for intra-city logistics." />
+  
+  <meta property="og:title" content="LYVO Loader Electric Cargo Vehicle | LIVELIFE AUTOTECH" />
+  <meta property="og:description" content="Heavy Duty. High Capacity. India's Smart Electric Loader Built for Tough Work." />
+  <meta property="og:image" content="../assets/products/loader/hero_main.jpg" />
+  <meta property="og:type" content="product" />
+
+  <link rel="icon" type="image/jpeg" href="../assets/brand/lyvo_emblem.jpg" />
+  <link rel="stylesheet" href="../src/css/main.css" />
+
+  <!-- Vendor Three.js & OrbitControls -->
+  <script src="../assets/vendor/three.min.js"></script>
+  <script src="../assets/vendor/OrbitControls.js"></script>
+</head>
+<body>
+
+  <!-- Global Header Mount -->
+  <div id="site-header-mount"></div>
+
+  <!-- Product Hero Section -->
+  <header class="section section-deep" style="padding-top: calc(var(--header-height) + 30px); padding-bottom: 20px;">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 24px;">
+        <div>
+          <div class="hero-badge-pill" style="margin-bottom: 12px;">
+            <span class="pill-dot"></span>
+            <span>Commercial Cargo • 750 kg Payload</span>
+          </div>
+          <h1 style="margin-bottom: 8px;">LYVO Loader</h1>
+          <p style="font-size: 1.15rem; color: var(--color-muted-grey);">
+            Heavy Duty. High Capacity. India's Smart Electric Loader Built for Tough Work.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <a href="#quotation-section" class="btn btn-yellow btn-lg">
+            Get a Quotation
+          </a>
+          <a href="../dealers.html" class="btn btn-outline-white">
+            Find a Dealer
+          </a>
+        </div>
+      </div>
+
+      <!-- Specs Quick Strip -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; padding: 18px 24px; background: var(--color-charcoal-surface); border: 1px solid var(--color-charcoal-border); border-radius: var(--radius-md); margin-bottom: 32px;">
+        <div>
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--color-muted-grey); display: block;">Payload Capacity</span>
+          <strong style="font-size: 1.25rem; color: var(--color-white); font-family: var(--font-display);">750 kg Max</strong>
+        </div>
+        <div>
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--color-muted-grey); display: block;">Cargo Bed Dimensions</span>
+          <strong style="font-size: 1.25rem; color: var(--color-white); font-family: var(--font-display);">2770 x 980 x 1270 mm</strong>
+        </div>
+        <div>
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--color-muted-grey); display: block;">Motor Power</span>
+          <strong style="font-size: 1.25rem; color: var(--color-lime); font-family: var(--font-display);">2.5 kW High Torque</strong>
+        </div>
+        <div>
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--color-muted-grey); display: block;">Battery Warranty</span>
+          <strong style="font-size: 1.25rem; color: var(--color-yellow); font-family: var(--font-display);">5 Year Warranty</strong>
+        </div>
+      </div>
+
+      <!-- 360° / 3D Vehicle Interactive Viewer Mount -->
+      <div id="vehicle-viewer-mount"></div>
+
+      <!-- Functional Three Colour Options Selector Mount -->
+      <div id="colour-selector-mount"></div>
+    </div>
+  </header>
+
+  <!-- Product Overview & Key Features -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Commercial Freight Logistics</span>
+        <h2 class="section-title">Built for Tough Indian Logistics</h2>
+        <p class="section-desc">
+          An electric cargo three-wheeler designed for practical goods transportation, intra-city freight distribution, warehouse dispatches, and heavy commercial duty.
+        </p>
+      </div>
+
+      <div class="pillars-grid" style="margin-bottom: 48px;">
+        <div class="pillar-card">
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-title">750 kg Heavy Duty Payload</h3>
+          <p class="pillar-desc">
+            Reinforced structural chassis engineered to haul dense commercial cargo including FMCG cartons, building materials, agricultural produce, and parcels.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-title">Spacious Cargo Bed Footprint</h3>
+          <p class="pillar-desc">
+            Long and wide flatbed (2770 x 980 mm) with fold-down dropsides enables quick forklift or manual loading and accommodates oversized volume crates.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-title">25% Gradeability Performance</h3>
+          <p class="pillar-desc">
+            High-reduction commercial gearbox paired with a 2.5 kW powertrain empowers drivers to negotiate steep flyovers, basement ramps, and rough incline roads effortlessly.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-num">04</span>
+          <h3 class="pillar-title">Fast Charge: 0% to 80% in 90 Mins</h3>
+          <p class="pillar-desc">
+            Quick turnaround recharge during mid-day unloading intervals minimizes vehicle downtime and maximizes billable trips per day.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-num">05</span>
+          <h3 class="pillar-title">Built for Every Business</h3>
+          <p class="pillar-desc">
+            Modular chassis platform adaptable for Open Dropside Flatbed, Weatherproof Delivery Box Van, Fresh Vegetable Carrier, or Utility Maintenance bodywork.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-num">06</span>
+          <h3 class="pillar-title">Heavy Duty Hydraulic Brakes</h3>
+          <p class="pillar-desc">
+            All-wheel hydraulic drum braking system and reinforced leaf spring suspension deliver confident stopping power and stability under maximum gross vehicle weight.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications Table -->
+  <section class="section section-deep" id="specifications-section">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-tag">Engineering Data</span>
+        <h2 class="section-title">Technical Specifications</h2>
+        <p class="section-desc">
+          Official engineering figures extracted from the LYVO commercial vehicle catalogue.
+        </p>
+      </div>
+
+      <div id="specs-mount"></div>
+    </div>
+  </section>
+
+  <!-- Product Image Gallery -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visual Walkthrough</span>
+        <h2 class="section-title">LYVO Loader Gallery</h2>
+        <p class="section-desc">
+          Commercial vehicle body styles, cargo configurations, and driver cabin environment.
+        </p>
+      </div>
+
+      <div id="gallery-mount"></div>
+    </div>
+  </section>
+
+  <!-- Get a Quotation Form (Pre-filled) -->
+  <section class="section section-deep" id="quotation-section">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-tag">Commercial Enquiry</span>
+        <h2 class="section-title">Get a Quotation for LYVO Loader</h2>
+        <p class="section-desc">
+          Receive tailored pricing, commercial fleet financing options, and local delivery estimates.
+        </p>
+      </div>
+
+      <div class="form-shell">
+        <div class="form-alert" id="quote-alert"></div>
+
+        <form id="product-quote-form" novalidate>
+          <input type="hidden" name="product" value="LYVO Loader" />
+          <input type="hidden" name="color" id="form-selected-color" value="LYVO Green" />
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name / Business Name <span class="req">*</span></label>
+              <input type="text" name="fullName" class="input-text" placeholder="e.g. Anand Logistics / Rajesh Sharma" required />
+              <span class="form-error-msg">Please enter your name or company</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mobile Number <span class="req">*</span></label>
+              <input type="tel" name="mobile" class="input-text" placeholder="10-digit mobile number" maxlength="10" required />
+              <span class="form-error-msg">Please enter a valid 10-digit mobile number</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" name="email" class="input-text" placeholder="yourname@domain.com" required />
+              <span class="form-error-msg">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">State <span class="req">*</span></label>
+              <select name="state" class="select-field" required>
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Delhi NCR">Delhi NCR</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Other">Other State</option>
+              </select>
+              <span class="form-error-msg">Please select your state</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">City or District <span class="req">*</span></label>
+              <input type="text" name="city" class="input-text" placeholder="e.g. Surat, Ahmedabad, Pune" required />
+              <span class="form-error-msg">Please enter your city</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">PIN Code <span class="req">*</span></label>
+              <input type="text" name="pincode" class="input-text" placeholder="6-digit PIN code" maxlength="6" required />
+              <span class="form-error-msg">Please enter a valid PIN code</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Selected Colour</label>
+              <input type="text" id="display-selected-color" class="input-text" value="LYVO Green" readonly style="opacity: 0.8; background: #1a1e1b;" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Estimated Vehicle Quantity <span class="req">*</span></label>
+              <select name="quantity" class="select-field" required>
+                <option value="1 Unit">1 Unit (Independent Transporter)</option>
+                <option value="2-5 Units">2 - 5 Units (SME Delivery Fleet)</option>
+                <option value="6-20 Units">6 - 20 Units (Logistics Fleet)</option>
+                <option value="20+ Units">20+ Units (Enterprise FMCG / 3PL)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Cargo Body Configuration Required</label>
+            <select name="bodyConfiguration" class="select-field">
+              <option value="Standard Open Flatbed">Standard Open Flatbed with Dropsides</option>
+              <option value="Enclosed Box Van">Enclosed Weatherproof Delivery Box Van</option>
+              <option value="Perishable Produce Carrier">Perishable Fresh Produce Carrier</option>
+              <option value="Custom Bodywork">Custom Industrial Bodywork</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Additional Message / Inquiries</label>
+            <textarea name="message" class="textarea-field" rows="3" placeholder="Specify your daily route distances, payload types, charging facilities..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox-label">
+              <input type="checkbox" name="consent" required />
+              <span>I agree to allow LIVELIFE AUTOTECH to contact me regarding this quotation enquiry.</span>
+            </label>
+            <span class="form-error-msg">You must provide consent to be contacted</span>
+          </div>
+
+          <button type="submit" class="btn btn-yellow btn-lg btn-full" style="margin-top: 12px;">
+            Submit Quotation Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find a Dealer Section -->
+  <section class="section section-dark">
+    <div class="container container-narrow" style="text-align: center;">
+      <span class="section-tag">Dealership Network</span>
+      <h2 class="section-title">Ready to Upgrade Your Commercial Fleet?</h2>
+      <p class="section-desc" style="margin-bottom: 28px;">
+        Connect with regional distribution partners or discuss fleet supply directly with LIVELIFE AUTOTECH.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="../dealers.html" class="btn btn-outline-white">
+          Find Nearest Dealer
+        </a>
+        <a href="../become-a-dealer.html" class="btn btn-outline-lime">
+          Become a Dealer Partner
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="section section-deep">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore Other Models</span>
+        <h2 class="section-title">More From the LYVO Range</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; max-width: 860px; margin: 0 auto;">
+        <!-- LYVO Passenger 6+1 -->
+        <article class="product-card">
+          <span class="product-card-badge">6+1 Seater</span>
+          <div class="product-card-media">
+            <img src="../assets/products/passenger/hero_main.jpg" alt="LYVO Passenger" class="product-card-img" />
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-name">LYVO Passenger 6+1</h3>
+            <p class="product-card-desc">An electric passenger three-wheeler designed for everyday passenger transportation.</p>
+            <a href="/products/lyvo-passenger.html" class="btn btn-forest btn-full">Explore Passenger</a>
+          </div>
+        </article>
+
+        <!-- LYVO Garbage -->
+        <article class="product-card">
+          <span class="product-card-badge">500 kg Waste</span>
+          <div class="product-card-media">
+            <img src="../assets/products/garbage/hero_main.jpg" alt="LYVO Garbage" class="product-card-img" />
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-card-name">LYVO Garbage</h3>
+            <p class="product-card-desc">An electric waste-management vehicle designed for municipal waste collection applications.</p>
+            <a href="/products/lyvo-garbage.html" class="btn btn-forest btn-full">Explore Garbage</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer Mount -->
+  <div id="site-footer-mount"></div>
+
+  <!-- Page Logic Script -->
+  <script type="module">
+    import { PRODUCTS } from '../src/js/productData.js';
+    import { renderHeader, renderFooter, renderColourSelector, renderSpecifications, renderProductGallery, initQuotationForm } from '../src/js/components.js';
+    import { VehicleViewer3D } from '../src/js/vehicleViewer3D.js';
+
+    const product = PRODUCTS.find(p => p.id === 'livo-loader' || p.id === 'lyvo-loader' || p.slug.includes('loader'));
+
+    renderHeader('product-loader');
+    renderFooter();
+
+    // 1. Initialize 3D Vehicle Studio
+    const viewerMount = document.getElementById('vehicle-viewer-mount');
+    const viewer = new VehicleViewer3D({
+      container: viewerMount,
+      product: product,
+      initialColor: product.colors[0]
+    });
+
+    // 2. Initialize Colour Selector
+    renderColourSelector('colour-selector-mount', product, (selectedColor) => {
+      viewer.updateVehicleColor(selectedColor);
+
+      const formColorInput = document.getElementById('form-selected-color');
+      const displayColor = document.getElementById('display-selected-color');
+      if (formColorInput) formColorInput.value = selectedColor.name;
+      if (displayColor) displayColor.value = selectedColor.name;
+    });
+
+    // 3. Technical Specifications
+    renderSpecifications('specs-mount', product);
+
+    // 4. Product Gallery
+    renderProductGallery('gallery-mount', product);
+
+    // 5. Quotation Form Handler
+    initQuotationForm('product-quote-form', product.name, product.colors[0].name);
+  </script>
+</body>
+</html>

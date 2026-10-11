@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quotation | LYVO Electric Three-Wheelers | LIVELIFE AUTOTECH</title>
+  <meta name="description" content="Request an official price quotation and commercial fleet financing estimate for LYVO Passenger 6+1, LYVO Loader, or LYVO Garbage electric vehicles." />
+  
+  <meta property="og:title" content="Get a Quotation | LIVELIFE AUTOTECH" />
+  <meta property="og:description" content="Get an official quotation for LYVO electric three-wheelers. Move Green. Earn Clean." />
+  <meta property="og:image" content="./assets/brand/lyvo_brand_hero.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="./assets/brand/lyvo_emblem.jpg" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+</head>
+<body>
+
+  <!-- Global Header Mount -->
+  <div id="site-header-mount"></div>
+
+  <!-- Hero Header -->
+  <header class="section section-deep" style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 40px;">
+    <div class="container container-narrow" style="text-align: center;">
+      <div class="hero-badge-pill" style="margin-bottom: 16px;">
+        <span class="pill-dot"></span>
+        <span>Commercial Quotation Request</span>
+      </div>
+      <h1 style="margin-bottom: 16px;">Get an Official Vehicle Quotation</h1>
+      <p class="lead" style="max-width: 720px; margin: 0 auto 24px;">
+        Receive custom commercial pricing, institutional purchase schemes, subsidy guidance, and delivery timelines directly from LIVELIFE AUTOTECH.
+      </p>
+    </div>
+  </header>
+
+  <!-- Quotation Form Section -->
+  <section class="section section-dark">
+    <div class="container container-narrow">
+      <div class="form-shell">
+        
+        <div class="form-alert" id="quote-page-alert"></div>
+
+        <form id="global-quote-form" novalidate>
+          
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name / Authorized Contact <span class="req">*</span></label>
+              <input type="text" name="fullName" class="input-text" placeholder="e.g. Ramesh Kumar / Sharma Enterprises" required />
+              <span class="form-error-msg">Please enter your full name</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mobile Number <span class="req">*</span></label>
+              <input type="tel" name="mobile" class="input-text" placeholder="10-digit mobile number" maxlength="10" required />
+              <span class="form-error-msg">Please enter a valid 10-digit mobile number</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" name="email" class="input-text" placeholder="yourname@domain.com" required />
+              <span class="form-error-msg">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">State <span class="req">*</span></label>
+              <select name="state" class="select-field" required>
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Delhi NCR">Delhi NCR</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Other">Other State</option>
+              </select>
+              <span class="form-error-msg">Please select your state</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">City or District <span class="req">*</span></label>
+              <input type="text" name="city" class="input-text" placeholder="e.g. Pune, Lucknow, Vadodara" required />
+              <span class="form-error-msg">Please enter your city</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">PIN Code <span class="req">*</span></label>
+              <input type="text" name="pincode" class="input-text" placeholder="6-digit PIN code" maxlength="6" required />
+              <span class="form-error-msg">Please enter a valid PIN code</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Selected Vehicle Model <span class="req">*</span></label>
+              <select name="product" id="quote-select-product" class="select-field" required>
+                <option value="LYVO Passenger 6+1">LYVO Passenger 6+1 (Electric Passenger Rickshaw)</option>
+                <option value="LYVO Loader">LYVO Loader (750 kg Electric Cargo Flatbed)</option>
+                <option value="LYVO Garbage">LYVO Garbage (500 kg Electric Waste Tipping Unit)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Selected Colour Shade <span class="req">*</span></label>
+              <select name="color" id="quote-select-color" class="select-field" required>
+                <option value="Signature Dual-Tone">Signature Dual-Tone (Factory Yellow & Green)</option>
+                <option value="Onyx Black">Onyx Black (Metallic Charcoal Black)</option>
+                <option value="Pearl White">Pearl White (Clean Fleet White)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Estimated Vehicle Quantity <span class="req">*</span></label>
+              <select name="quantity" class="select-field" required>
+                <option value="1 Unit">1 Unit (Individual Operator)</option>
+                <option value="2-5 Units">2 - 5 Units (Small Fleet)</option>
+                <option value="6-20 Units">6 - 20 Units (Commercial Logistics Fleet)</option>
+                <option value="20-50 Units">20 - 50 Units (Enterprise / Tender Fleet)</option>
+                <option value="50+ Units">50+ Units (Municipal / Government Contract)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Intended Commercial Application</label>
+              <input type="text" name="application" class="input-text" placeholder="e.g. Passenger transit, FMCG distribution, Municipal waste" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Additional Message / Inquiries</label>
+            <textarea name="message" class="textarea-field" rows="3" placeholder="Tell us if you need vehicle financing assistance, customized bodywork, or bulk delivery schedules..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-checkbox-label">
+              <input type="checkbox" name="consent" required />
+              <span>I consent to allow LIVELIFE AUTOTECH PRIVATE LIMITED to process my information and contact me regarding this quotation request.</span>
+            </label>
+            <span class="form-error-msg">You must grant consent to submit quotation</span>
+          </div>
+
+          <button type="submit" class="btn btn-yellow btn-lg btn-full" style="margin-top: 14px;">
+            Submit Quotation Request
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer Mount -->
+  <div id="site-footer-mount"></div>
+
+  <script type="module">
+    import { renderHeader, renderFooter, initQuotationForm } from './src/js/components.js';
+
+    renderHeader('quote');
+    renderFooter();
+
+    // Parse URL params for prefill: ?product=lyvo-loader&color=black
+    const urlParams = new URLSearchParams(window.location.search);
+    const prodParam = urlParams.get('product');
+    const colorParam = urlParams.get('color');
+
+    const selectProd = document.getElementById('quote-select-product');
+    const selectColor = document.getElementById('quote-select-color');
+
+    if (prodParam && selectProd) {
+      if (prodParam.includes('loader')) selectProd.value = 'LYVO Loader';
+      else if (prodParam.includes('garbage')) selectProd.value = 'LYVO Garbage';
+      else if (prodParam.includes('passenger')) selectProd.value = 'LYVO Passenger 6+1';
+    }
+
+    if (colorParam && selectColor) {
+      if (colorParam.toLowerCase().includes('black')) selectColor.value = 'Onyx Black';
+      else if (colorParam.toLowerCase().includes('white')) selectColor.value = 'Pearl White';
+      else selectColor.value = 'Signature Dual-Tone';
+    }
+
+    initQuotationForm('global-quote-form');
+  </script>
+</body>
+</html>
