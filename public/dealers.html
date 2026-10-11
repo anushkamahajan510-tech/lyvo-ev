@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Dealer | Authorized Network & Hubs | LIVELIFE AUTOTECH</title>
+  <meta name="description" content="Locate authorized LIVELIFE AUTOTECH commercial EV dealership hubs, priority regional distribution centers, or connect directly with our corporate team." />
+  
+  <meta property="og:title" content="Find a Dealer | LIVELIFE AUTOTECH" />
+  <meta property="og:description" content="Find Your LYVO Connection. Priority deployment regions and authorized commercial EV support." />
+  <meta property="og:image" content="./assets/brand/lyvo_brand_hero.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="./assets/brand/lyvo_emblem.jpg" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+</head>
+<body>
+
+  <!-- Global Header Mount -->
+  <div id="site-header-mount"></div>
+
+  <!-- Hero Header -->
+  <header class="section section-deep" style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 40px;">
+    <div class="container container-narrow" style="text-align: center;">
+      <div class="hero-badge-pill" style="margin-bottom: 16px;">
+        <span class="pill-dot"></span>
+        <span>Authorized Network</span>
+      </div>
+      <h1 style="margin-bottom: 16px;">Find Your LYVO Connection</h1>
+      <p class="lead" style="max-width: 720px; margin: 0 auto 24px;">
+        Locate authorized regional hubs or connect with our corporate factory support team for vehicle bookings, test demonstrations, and fleet dispatches.
+      </p>
+    </div>
+  </header>
+
+  <!-- Dealer Locator Core Section -->
+  <section class="section section-dark">
+    <div class="container">
+      
+      <!-- Ather Inspired Search Filter Box -->
+      <div class="dealer-locator-wrapper" style="margin-bottom: 48px;">
+        <form id="locator-search-form" class="dealer-search-bar">
+          <div class="input-field-wrap">
+            <label class="input-label" for="search-city">City or District</label>
+            <input type="text" id="search-city" class="input-text" placeholder="e.g. Pune, Mumbai, Delhi, Ahmedabad, Lucknow" />
+          </div>
+
+          <div class="input-field-wrap">
+            <label class="input-label" for="search-pincode">PIN Code</label>
+            <input type="text" id="search-pincode" class="input-text" placeholder="6-digit PIN (e.g. 411001, 110001)" maxlength="6" />
+          </div>
+
+          <div style="display: flex; align-items: flex-end; gap: 10px;">
+            <button type="submit" class="btn btn-yellow" style="height: 50px;">
+              Search Network
+            </button>
+            <button type="button" id="btn-reset-filter" class="btn btn-outline-white" style="height: 50px;">
+              Show All
+            </button>
+          </div>
+        </form>
+
+        <!-- Dynamic Feedback Banner -->
+        <div class="dealer-status-banner" id="locator-status-banner">
+          <div>
+            <strong style="color: var(--color-white); font-size: 1rem; display: block; margin-bottom: 4px;">
+              National Commercial EV Network Rollout
+            </strong>
+            <span style="font-size: 0.88rem; color: var(--color-light-grey);">
+              LIVELIFE AUTOTECH is systematically rolling out authorized dealer hubs. For districts without a local showroom, direct factory sales and dispatch are supported from our headquarters.
+            </span>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <a href="mailto:livelifeautotech09@gmail.com" class="btn btn-yellow btn-sm">
+              Email Factory Desk
+            </a>
+            <a href="./become-a-dealer.html" class="btn btn-outline-lime btn-sm">
+              Apply for Dealership
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Hub Results Grid -->
+      <div style="margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between;">
+        <h2 style="font-size: 1.5rem; color: var(--color-white);" id="results-count-heading">Priority Regional Expansion Hubs</h2>
+        <span style="font-size: 0.85rem; color: var(--color-muted-grey);">Direct Factory Support Active</span>
+      </div>
+
+      <div class="dealer-results-grid" id="dealer-cards-grid">
+        <!-- Rendered dynamically via JS below -->
+      </div>
+
+      <!-- No Match State (Initially Hidden) -->
+      <div id="no-match-box" style="display: none; background: var(--color-charcoal-deep); border: 1px solid var(--color-charcoal-border); border-radius: var(--radius-lg); padding: 48px; text-align: center; margin-top: 24px;">
+        <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--color-white); margin-bottom: 12px;">
+          No Direct Showroom Registered In This Specific PIN / City Yet
+        </div>
+        <p style="max-width: 620px; margin: 0 auto 24px; color: var(--color-light-grey); font-size: 1rem; line-height: 1.6;">
+          Our authorized network is rapidly expanding. In the interim, LIVELIFE AUTOTECH coordinates direct corporate factory delivery, RTO registration, and warranty support for your location.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="mailto:livelifeautotech09@gmail.com" class="btn btn-yellow">
+            Contact Company (livelifeautotech09@gmail.com)
+          </a>
+          <a href="./become-a-dealer.html" class="btn btn-outline-lime">
+            Enquire About Becoming Dealer in This Area
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer Mount -->
+  <div id="site-footer-mount"></div>
+
+  <script type="module">
+    import { DEALER_REGIONS, COMPANY_INFO } from './src/js/productData.js';
+    import { renderHeader, renderFooter } from './src/js/components.js';
+
+    renderHeader('dealers');
+    renderFooter();
+
+    const grid = document.getElementById('dealer-cards-grid');
+    const noMatchBox = document.getElementById('no-match-box');
+    const searchForm = document.getElementById('locator-search-form');
+    const cityInput = document.getElementById('search-city');
+    const pinInput = document.getElementById('search-pincode');
+    const resetBtn = document.getElementById('btn-reset-filter');
+    const countHeading = document.getElementById('results-count-heading');
+
+    function renderDealers(list) {
+      if (!list || list.length === 0) {
+        grid.style.display = 'none';
+        noMatchBox.style.display = 'block';
+        countHeading.textContent = '0 Hubs Found';
+        return;
+      }
+
+      grid.style.display = 'grid';
+      noMatchBox.style.display = 'none';
+      countHeading.textContent = `${list.length} Priority Deployment Hubs`;
+
+      grid.innerHTML = list.map(item => `
+        <div class="dealer-card">
+          <span class="dealer-region-tag">${item.status}</span>
+          <h3 class="dealer-card-name">${item.state} Regional Zone</h3>
+          <p class="dealer-card-detail">
+            <strong>Key Cities Covered:</strong><br />
+            ${item.cities.join(' • ')}
+          </p>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem; color: var(--color-muted-grey);">
+            <div><strong>Corporate Support:</strong> ${item.notes}</div>
+            <div style="margin-top: 6px;"><strong>Email:</strong> <a href="mailto:${COMPANY_INFO.email}" style="color: var(--color-lime);">${COMPANY_INFO.email}</a></div>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="mailto:${COMPANY_INFO.email}?subject=Dealer%20Enquiry%20for%20${encodeURIComponent(item.state)}" class="btn btn-outline-white btn-sm btn-full">
+              Connect for ${item.state}
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderDealers(DEALER_REGIONS);
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const qCity = cityInput.value.trim().toLowerCase();
+      const qPin = pinInput.value.trim();
+
+      const filtered = DEALER_REGIONS.filter(item => {
+        const stateMatch = item.state.toLowerCase().includes(qCity);
+        const cityMatch = item.cities.some(c => c.toLowerCase().includes(qCity));
+        // PIN codes starting with state indicator or matching
+        const pinMatch = qPin.length >= 2 ? (
+          (qPin.startsWith('4') && (item.state === 'Maharashtra' || item.state === 'Gujarat')) ||
+          (qPin.startsWith('1') && item.state === 'Delhi NCR') ||
+          (qPin.startsWith('2') && item.state === 'Uttar Pradesh') ||
+          (qPin.startsWith('5') && (item.state === 'Karnataka' || item.state === 'Tamil Nadu')) ||
+          (qPin.startsWith('6') && item.state === 'Tamil Nadu')
+        ) : true;
+
+        if (qCity && qPin) {
+          return (stateMatch || cityMatch) && pinMatch;
+        } else if (qCity) {
+          return stateMatch || cityMatch;
+        } else if (qPin) {
+          return pinMatch;
+        }
+        return true;
+      });
+
+      renderDealers(filtered);
+    });
+
+    resetBtn.addEventListener('click', () => {
+      cityInput.value = '';
+      pinInput.value = '';
+      renderDealers(DEALER_REGIONS);
+    });
+  </script>
+</body>
+</html>
